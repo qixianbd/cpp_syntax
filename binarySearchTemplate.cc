@@ -13,6 +13,22 @@ T max(T a, T b){
 	return b > a ? b : a;
 }
 
+template<typename T>
+bool less(T a, T b){
+	return a < b;
+}
+
+template<typename T>
+bool not_equal_to(T a, T b){
+	return a != b;
+}
+
+template<typename T>
+void swap(T& a, T& b){
+	T c = a;
+	a = b;
+	b = c;
+}
 
 
 template<typename T>
@@ -46,6 +62,11 @@ int main()
 	int i = 3, j = 4;
 	std::cout << max(i,j) << std::endl;
 	std::cout << max(5.5, 6.6) << std::endl;
+
+	std::cout << less(5, i) << std::endl;
+	swap(i, j);
+	std::cout << "i = " << i << ", j = " << j << std::endl;
+	return 0;
 }
 
 
